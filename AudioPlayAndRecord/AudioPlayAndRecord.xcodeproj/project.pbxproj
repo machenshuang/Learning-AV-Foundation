@@ -17,6 +17,7 @@
 		4210DA332601FEA3001FF0D5 /* bass.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA302601FEA3001FF0D5 /* bass.caf */; };
 		4210DA342601FEA3001FF0D5 /* guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA312601FEA3001FF0D5 /* guitar.caf */; };
 		4210DA352601FEA3001FF0D5 /* drums.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA322601FEA3001FF0D5 /* drums.caf */; };
+		4210DA3A2602023A001FF0D5 /* AudioRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210DA392602023A001FF0D5 /* AudioRecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4210DA302601FEA3001FF0D5 /* bass.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.caf; sourceTree = "<group>"; };
 		4210DA312601FEA3001FF0D5 /* guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = guitar.caf; sourceTree = "<group>"; };
 		4210DA322601FEA3001FF0D5 /* drums.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.caf; sourceTree = "<group>"; };
+		4210DA392602023A001FF0D5 /* AudioRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				4210DA172601D890001FF0D5 /* Info.plist */,
 				4210DA222601DD72001FF0D5 /* AVSpeechViewController.swift */,
 				4210DA252601EBE1001FF0D5 /* AudioPlayViewController.swift */,
+				4210DA392602023A001FF0D5 /* AudioRecordViewController.swift */,
 			);
 			path = AudioPlayAndRecord;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4210DA3A2602023A001FF0D5 /* AudioRecordViewController.swift in Sources */,
 				4210DA0E2601D88E001FF0D5 /* ViewController.swift in Sources */,
 				4210DA262601EBE1001FF0D5 /* AudioPlayViewController.swift in Sources */,
 				4210DA232601DD72001FF0D5 /* AVSpeechViewController.swift in Sources */,

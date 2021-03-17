@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func recordButtonClick(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "AudioRecord")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
