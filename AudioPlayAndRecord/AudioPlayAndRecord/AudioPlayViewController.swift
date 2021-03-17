@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class AudoPlayViewController: UIViewController {
+class AudioPlayViewController: UIViewController {
     
     private var players: [AVAudioPlayer]!
     
@@ -82,6 +82,6 @@ class AudoPlayViewController: UIViewController {
     }
 }
 
-extension AudoPlayViewController: AVAudioPlayerDelegate {
+extension AudioPlayViewController: AVAudioPlayerDelegate {
     
 }

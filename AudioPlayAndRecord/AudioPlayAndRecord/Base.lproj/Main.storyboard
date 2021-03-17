@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="713.04347826086962" y="101.78571428571428"/>
         </scene>
-        <!--Audo Play View Controller-->
+        <!--Audio Play View Controller-->
         <scene sceneID="gTH-vG-bpE">
             <objects>
-                <viewController storyboardIdentifier="AudioPlay" id="WWE-Qu-pDi" customClass="AudoPlayViewController" customModule="AudioPlayAndRecord" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AudioPlay" id="WWE-Qu-pDi" customClass="AudioPlayViewController" customModule="AudioPlayAndRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xI1-tO-gkO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
