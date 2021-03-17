@@ -37,14 +37,15 @@ class AVSpeechViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.synthesizer = AVSpeechSynthesizer()
+        // 语音
         let voice = AVSpeechSynthesisVoice(language: "zh-CN")!
         
         
         let utterance = AVSpeechUtterance(string: SpeechString)
         utterance.voice = voice
-        utterance.rate = 0.5
-        utterance.pitchMultiplier = 0.8
-        utterance.postUtteranceDelay = 0.12
+        utterance.rate = 0.5    // 速率
+        utterance.pitchMultiplier = 0.8 // 语音音调
+        utterance.postUtteranceDelay = 0.12 // 停顿
         self.synthesizer.speak(utterance)
         
     }

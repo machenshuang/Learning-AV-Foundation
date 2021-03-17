@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		4210DA0A2601D88E001FF0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210DA092601D88E001FF0D5 /* AppDelegate.swift */; };
 		4210DA0E2601D88E001FF0D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210DA0D2601D88E001FF0D5 /* ViewController.swift */; };
-		4210DA112601D88E001FF0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA0F2601D88E001FF0D5 /* Main.storyboard */; };
+		4210DA112601D88E001FF0D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA0F2601D88E001FF0D5 /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
 		4210DA132601D890001FF0D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA122601D890001FF0D5 /* Assets.xcassets */; };
 		4210DA162601D890001FF0D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA142601D890001FF0D5 /* LaunchScreen.storyboard */; };
 		4210DA232601DD72001FF0D5 /* AVSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210DA222601DD72001FF0D5 /* AVSpeechViewController.swift */; };
+		4210DA262601EBE1001FF0D5 /* AudoPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210DA252601EBE1001FF0D5 /* AudoPlayViewController.swift */; };
+		4210DA332601FEA3001FF0D5 /* bass.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA302601FEA3001FF0D5 /* bass.caf */; };
+		4210DA342601FEA3001FF0D5 /* guitar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA312601FEA3001FF0D5 /* guitar.caf */; };
+		4210DA352601FEA3001FF0D5 /* drums.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4210DA322601FEA3001FF0D5 /* drums.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		4210DA152601D890001FF0D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4210DA172601D890001FF0D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4210DA222601DD72001FF0D5 /* AVSpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVSpeechViewController.swift; sourceTree = "<group>"; };
+		4210DA252601EBE1001FF0D5 /* AudoPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudoPlayViewController.swift; sourceTree = "<group>"; };
+		4210DA302601FEA3001FF0D5 /* bass.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bass.caf; sourceTree = "<group>"; };
+		4210DA312601FEA3001FF0D5 /* guitar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = guitar.caf; sourceTree = "<group>"; };
+		4210DA322601FEA3001FF0D5 /* drums.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = drums.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		4210DA082601D88E001FF0D5 /* AudioPlayAndRecord */ = {
 			isa = PBXGroup;
 			children = (
+				4210DA292601EE7D001FF0D5 /* Resources */,
 				4210DA092601D88E001FF0D5 /* AppDelegate.swift */,
 				4210DA0D2601D88E001FF0D5 /* ViewController.swift */,
 				4210DA0F2601D88E001FF0D5 /* Main.storyboard */,
@@ -63,8 +72,19 @@
 				4210DA142601D890001FF0D5 /* LaunchScreen.storyboard */,
 				4210DA172601D890001FF0D5 /* Info.plist */,
 				4210DA222601DD72001FF0D5 /* AVSpeechViewController.swift */,
+				4210DA252601EBE1001FF0D5 /* AudoPlayViewController.swift */,
 			);
 			path = AudioPlayAndRecord;
+			sourceTree = "<group>";
+		};
+		4210DA292601EE7D001FF0D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4210DA302601FEA3001FF0D5 /* bass.caf */,
+				4210DA322601FEA3001FF0D5 /* drums.caf */,
+				4210DA312601FEA3001FF0D5 /* guitar.caf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +113,9 @@
 		4210D9FE2601D88E001FF0D5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
@@ -124,8 +147,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4210DA342601FEA3001FF0D5 /* guitar.caf in Resources */,
 				4210DA162601D890001FF0D5 /* LaunchScreen.storyboard in Resources */,
+				4210DA332601FEA3001FF0D5 /* bass.caf in Resources */,
 				4210DA132601D890001FF0D5 /* Assets.xcassets in Resources */,
+				4210DA352601FEA3001FF0D5 /* drums.caf in Resources */,
 				4210DA112601D88E001FF0D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4210DA0E2601D88E001FF0D5 /* ViewController.swift in Sources */,
+				4210DA262601EBE1001FF0D5 /* AudoPlayViewController.swift in Sources */,
 				4210DA232601DD72001FF0D5 /* AVSpeechViewController.swift in Sources */,
 				4210DA0A2601D88E001FF0D5 /* AppDelegate.swift in Sources */,
 			);
@@ -296,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.machenshuang.www.Sampler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.machenshuang.www.Sampler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

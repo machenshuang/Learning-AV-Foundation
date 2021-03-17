@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playButtonClick(_ sender: UIButton) {
-        
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "AudioPlay")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func recordButtonClick(_ sender: UIButton) {
