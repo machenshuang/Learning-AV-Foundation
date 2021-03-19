@@ -106,6 +106,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func seekSliderValueChanged(_ sender: UISlider) {
+        self.player.seek(to: CMTimeMakeWithSeconds(Float64(sender.value), preferredTimescale: Int32(NSEC_PER_SEC)))
     }
 }
 
