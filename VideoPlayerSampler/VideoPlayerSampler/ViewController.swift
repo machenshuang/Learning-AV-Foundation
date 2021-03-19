@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     private var isPlaying: Bool = false
     
     private var playerStatusObserver: NSKeyValueObservation?
+    private var timeObserver: Any?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ class ViewController: UIViewController {
         self.playerStatusObserver = self.playerItem.observe(\.status, options: [.new]) { (playerItem, change) in
             DispatchQueue.main.async {
                 if playerItem.status == .readyToPlay {
+                    self.addPlayerItemTimeObserver()
                     self.player.play()
                     self.isPlaying = false
                 } else {
@@ -55,6 +57,29 @@ class ViewController: UIViewController {
             }
         }
         
+    }
+    
+    private func addPlayerItemTimeObserver() {
+        //创建0.5s间隔刷新
+        let interval = CMTimeMakeWithSeconds(0.5, preferredTimescale: Int32(NSEC_PER_SEC))
+        let mainQueue = DispatchQueue.main
+        self.timeObserver = self.player.addPeriodicTimeObserver(forInterval: interval, queue: mainQueue, using: { (time) in
+            let currentTime = CMTimeGetSeconds(time)
+            let duration = CMTimeGetSeconds(self.playerItem.duration)
+            let currentSecond = Int(ceil(currentTime))
+            let remainingTime = Int(duration - currentTime)
+            self.playeredTimeLab.text = self.formatSeconds(value: currentSecond)
+            self.unPlayTimeLabel.text = self.formatSeconds(value: remainingTime)
+            self.seekTimeSlider.minimumValue = 0.0
+            self.seekTimeSlider.maximumValue = Float(duration)
+            self.seekTimeSlider.value = Float(currentTime)
+        })
+    }
+    
+    private func formatSeconds(value: Int) -> String{
+        let second = value % 60
+        let minutes = value / 60
+        return String(format: "%0.2ld:%0.2ld", minutes, second)
     }
     
     @IBAction func playerButtonClick(_ sender: UIButton) {
