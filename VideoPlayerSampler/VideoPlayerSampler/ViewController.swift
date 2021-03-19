@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     private var playerStatusObserver: NSKeyValueObservation?
     private var timeObserver: Any?
+    private var itemEndObserver: Any?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 if playerItem.status == .readyToPlay {
                     self.addPlayerItemTimeObserver()
+                    self.addItemEndObserverForPlayerItem()
                     self.player.play()
                     self.isPlaying = false
                 } else {
@@ -73,6 +75,15 @@ class ViewController: UIViewController {
             self.seekTimeSlider.minimumValue = 0.0
             self.seekTimeSlider.maximumValue = Float(duration)
             self.seekTimeSlider.value = Float(currentTime)
+        })
+    }
+    
+    private func addItemEndObserverForPlayerItem() {
+        self.itemEndObserver = NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.playerItem, queue: OperationQueue.main, using: { (noti) in
+            self.player.seek(to: .zero) { (finished) in
+                self.isPlaying = false
+                self.playerButton.setTitle("PLAY", for: .normal)
+            }
         })
     }
     
