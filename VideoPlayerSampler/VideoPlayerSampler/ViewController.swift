@@ -16,6 +16,13 @@ class ViewController: UIViewController {
     private var player: AVPlayer!
     
     @IBOutlet weak var playerView: SMPlayerView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var playerButton: UIButton!
+    @IBOutlet weak var playeredTimeLab: UILabel!
+    @IBOutlet weak var unPlayTimeLabel: UILabel!
+    @IBOutlet weak var seekTimeSlider: UISlider!
+    
+    private var isPlaying: Bool = false
     
     private var playerStatusObserver: NSKeyValueObservation?
     
@@ -40,6 +47,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 if playerItem.status == .readyToPlay {
                     self.player.play()
+                    self.isPlaying = false
                 } else {
                     let vc = UIAlertController(title: "Error", message: "Fail To load video", preferredStyle: .alert)
                     self.present(vc, animated: true, completion: nil)
@@ -47,6 +55,21 @@ class ViewController: UIViewController {
             }
         }
         
+    }
+    
+    @IBAction func playerButtonClick(_ sender: UIButton) {
+        if self.isPlaying {
+            self.player.pause()
+            self.isPlaying = false
+            self.playerButton.setTitle("PLAY", for: .normal)
+        } else {
+            self.player.play()
+            self.isPlaying = true
+            self.playerButton.setTitle("STOP", for: .normal)
+        }
+    }
+    
+    @IBAction func seekSliderValueChanged(_ sender: UISlider) {
     }
 }
 
